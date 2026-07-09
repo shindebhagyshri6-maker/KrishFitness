@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Krish Fitness Studio | Premium Boutique Training Ground</title>
+    <meta name="description" content="Welcome to Krish Fitness Studio. Elite boutique infrastructure, luxury design, science-based personal training, and premium recovery ecosystems.">
+    
+    <!-- Google Fonts & Tailwind CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js for interactive state architecture -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: '#FAFAFA',      /* Soft crisp white backdrop */
+                            pureWhite: '#FFFFFF',
+                            charcoal: '#1A1A1E',   /* Ultra-premium dark text/neutral */
+                            lightGrey: '#F3F3F5',  /* Soft structure partitions */
+                            borderGrey: '#E5E5EA',
+                            pink: '#E07A93',       /* Luxury Rose Pink accent */
+                            pinkHover: '#C9627B',
+                            pinkLight: '#FFF0F3'   /* Gentle pink tone backdrop */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(224, 122, 147, 0.15)',
+                        'glass': '0 8px 32px 0 rgba(26, 26, 30, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        [x-cloak] { display: none !important; }
+        .text-gradient {
+            background: linear-gradient(135deg, #1A1A1E 30%, #E07A93 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-charcoal font-sans antialiased selection:bg-brand-pink selection:text-white overflow-x-hidden">
+
+    <!-- Luxury Minimal Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-pureWhite/80 backdrop-blur-md border-b border-brand-borderGrey px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <div class="text-xl font-display tracking-tight font-bold">
+            Krish <span class="text-brand-pink italic font-normal">Studio</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-semibold text-brand-charcoal/70">
+            <a href="#studio" class="hover:text-brand-pink transition-colors">The Facility</a>
+            <a href="#tiers" class="hover:text-brand-pink transition-colors">Memberships</a>
+            <a href="#calculator" class="hover:text-brand-pink transition-colors">Biometrics</a>
+            <a href="#schedule" class="hover:text-brand-pink transition-colors">Schedules</a>
+        </div>
+        <a href="#booking" class="hidden sm:inline-block bg-brand-charcoal text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-brand-pink hover:shadow-premium">
+            Request Guest Pass
+        </a>
+    </nav>
+
+    <!-- Luxury Boutique Studio Hero Section -->
+    <section class="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 overflow-hidden pt-28 pb-16">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-pinkLight/30 via-transparent to-transparent z-0"></div>
+        <div class="absolute w-[600px] h-[600px] bg-brand-pink/5 rounded-full filter blur-[140px] -top-40 -right-40 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <span class="inline-block text-[10px] uppercase bg-brand-pureWhite border border-brand-borderGrey text-brand-pink tracking-widest px-4 py-1.5 rounded-full font-bold shadow-sm">
+                ✨ Cultivating Elite Physical Wellness
+            </span>
+            
+            <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight text-brand-charcoal leading-none">
+                A premium space designed for <br>
+                <span class="text-gradient italic font-normal">intentional progression.</span>
+            </h1>
+
+            <p class="max-w-xl mx-auto text-brand-charcoal/60 text-sm md:text-base font-light leading-relaxed">
+                Step inside an architect-designed training environment. Blending high-density biomechanical engineering with curated recovery diagnostics for exceptional body transformations.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2">
+                <a href="#booking" class="w-full sm:w-auto bg-brand-pink text-white text-center px-8 py-3.5 rounded-full font-semibold uppercase tracking-wider text-xs transition-all duration-300 hover:bg-brand-pinkHover hover:shadow-premium">
+                    Claim Complimentary Pass
+                </a>
+                <a href="#tiers" class="w-full sm:w-auto bg-brand-pureWhite border border-brand-borderGrey text-brand-charcoal text-center px-8 py-3.5 rounded-full font-semibold uppercase tracking-wider text-xs transition-all hover:bg-brand-lightGrey">
+                    Explore Access Tiers
+                </a>
+            </div>
+        </div>
+
+        <!-- Minimalist Luxury Metric Indicators -->
+        <div class="relative z-10 max-w-5xl w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mt-24 px-4">
+            <div class="bg-brand-pureWhite border border-brand-borderGrey/70 p-6 rounded-2xl shadow-sm flex flex-col items-center">
+                <span class="text-2xl font-display font-bold text-brand-charcoal">10,000 SQ FT</span>
+                <span class="text-brand-charcoal/40 text-[10px] mt-1 tracking-widest uppercase font-semibold">Architectural Deck</span>
+            </div>
+            <div class="bg-brand-pureWhite border border-brand-borderGrey/70 p-6 rounded-2xl shadow-sm flex flex-col items-center">
+                <span class="text-2xl font-display font-bold text-brand-pink">1-ON-1</span>
+                <span class="text-brand-charcoal/40 text-[10px] mt-1 tracking-widest uppercase font-semibold">Physiological Care</span>
+            </div>
+            <div class="bg-brand-pureWhite border border-brand-borderGrey/70 p-6 rounded-2xl shadow-sm flex flex-col items-center">
+                <span class="text-2xl font-display font-bold text-brand-charcoal">PREMIUM</span>
+                <span class="text-brand-charcoal/40 text-[10px] mt-1 tracking-widest uppercase font-semibold">Custom Machinery</span>
+            </div>
+            <div class="bg-brand-pureWhite border border-brand-borderGrey/70 p-6 rounded-2xl shadow-sm flex flex-col items-center">
+                <span class="text-2xl font-display font-bold text-brand-pink">RECOVERY</span>
+                <span class="text-brand-charcoal/40 text-[10px] mt-1 tracking-widest uppercase font-semibold">Infrared Protocols</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Luxury Facility Grid -->
+    <section id="studio" class="py-24 px-6 max-w-7xl mx-auto border-t border-brand-borderGrey">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+            <div>
+                <span class="text-brand-pink text-xs font-bold uppercase tracking-widest block mb-2">Architectural Curation</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">The Studio Environment</h2>
+            </div>
+            <p class="text-brand-charcoal/50 max-w-sm text-xs leading-relaxed">
+                We consciously limit active studio footfall to maintain a calm, highly focused atmosphere for distraction-free physical training execution.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Asset 1 -->
+            <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl overflow-hidden shadow-sm group">
+                <div class="aspect-video w-full bg-brand-lightGrey relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover filter contrast-[0.95] intensity-[0.9]" alt="The Floor">
+                </div>
+                <div class="p-6 space-y-2">
+                    <h3 class="text-lg font-display font-bold text-brand-charcoal">The Biomechanical Deck</h3>
+                    <p class="text-brand-charcoal/60 text-xs leading-relaxed">Custom, selectorized strength equipment calibrated to safely optimize torque curves and maximize muscular fiber tension.</p>
+                </div>
+            </div>
+            <!-- Asset 2 -->
+            <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl overflow-hidden shadow-sm group">
+                <div class="aspect-video w-full bg-brand-lightGrey relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600881333168-2ef49b341f30?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover filter contrast-[0.95]" alt="Coaching Pod">
+                </div>
+                <div class="p-6 space-y-2">
+                    <h3 class="text-lg font-display font-bold text-brand-pink">Private Consultation Suite</h3>
+                    <p class="text-brand-charcoal/60 text-xs leading-relaxed">Quiet diagnostic environments equipped with composition trackers and structural metabolic profiling systems.</p>
+                </div>
+            </div>
+            <!-- Asset 3 -->
+            <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl overflow-hidden shadow-sm group">
+                <div class="aspect-video w-full bg-brand-lightGrey relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover filter contrast-[0.95]" alt="Therapy">
+                </div>
+                <div class="p-6 space-y-2">
+                    <h3 class="text-lg font-display font-bold text-brand-charcoal">Holistic Recovery Sanctuary</h3>
+                    <p class="text-brand-charcoal/60 text-xs leading-relaxed">Post-training decompression spaces featuring advanced custom dry saunas and localized tissue cryo-treatment systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio Membership Packages Grid -->
+    <section id="tiers" class="py-24 px-6 bg-brand-lightGrey border-y border-brand-borderGrey">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-2">
+                <span class="text-brand-pink text-xs font-bold uppercase tracking-widest block">Curated Membership Plans</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Access Architecture</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl p-8 flex flex-col justify-between shadow-sm transition-transform hover:scale-[1.01]">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-display font-bold tracking-wide">Club Floor Membership</h3>
+                        <p class="text-brand-charcoal/50 text-xs">Full access to the core biomechanical platform and structural facility resources.</p>
+                        <div class="text-2xl font-display font-bold text-brand-charcoal">Open Access <span class="text-xs font-sans text-brand-charcoal/40 font-semibold uppercase block mt-1">Independent Training</span></div>
+                        <ul class="space-y-2 text-xs text-brand-charcoal/70 pt-4 border-t border-brand-borderGrey">
+                            <li class="flex items-center gap-2">✓ Unlimited Use of the 10k Sq Ft Deck</li>
+                            <li class="flex items-center gap-2">✓ Luxury Locker, Towel & Sauna Access</li>
+                            <li class="flex items-center gap-2">✓ Initial Bio-Composition Diagnostics Run</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="block text-center bg-brand-lightGrey text-brand-charcoal font-semibold uppercase text-[10px] tracking-wider py-3.5 rounded-full mt-8 transition-colors hover:bg-brand-borderGrey">Select Membership</a>
+                </div>
+
+                <!-- Tier 2 (Highlighted) -->
+                <div class="bg-brand-pureWhite border-2 border-brand-pink rounded-2xl p-8 flex flex-col justify-between shadow-premium transition-transform hover:scale-[1.01] relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-pink text-white px-4 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest">Boutique Signature Track</div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-display font-bold tracking-wide text-brand-pink">Elite Private Coaching</h3>
+                        <p class="text-brand-charcoal/60 text-xs">Comprehensive 1-on-1 personal physical engineering with total coach alignment.</p>
+                        <div class="text-2xl font-display font-bold text-brand-charcoal">All Inclusive <span class="text-xs font-sans text-brand-pink font-semibold uppercase block mt-1">+ Assigned Personal Coach</span></div>
+                        <ul class="space-y-2 text-xs text-brand-charcoal/80 pt-4 border-t border-brand-borderGrey">
+                            <li class="flex items-center gap-2">✓ Dedicated One-on-One Custom Coaching Blocks</li>
+                            <li class="flex items-center gap-2">✓ Weekly Cellular Biomarker Adjustments</li>
+                            <li class="flex items-center gap-2">✓ Permanent Priority Recovery Lounge Access</li>
+                            <li class="flex items-center gap-2">✓ Tailored Private Nutrition Profile Updates</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="block text-center bg-brand-pink text-white font-semibold uppercase text-[10px] tracking-wider py-3.5 rounded-full mt-8 transition-colors hover:bg-brand-pinkHover">Request Assignment</a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl p-8 flex flex-col justify-between shadow-sm transition-transform hover:scale-[1.01]">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-display font-bold tracking-wide">The Conditioning Track</h3>
+                        <p class="text-brand-charcoal/50 text-xs">High-tempo team metabolic training tracks focused on athletic capability.</p>
+                        <div class="text-2xl font-display font-bold text-brand-charcoal">Group Training <span class="text-xs font-sans text-brand-charcoal/40 font-semibold uppercase block mt-1">Unlimited Sessions</span></div>
+                        <ul class="space-y-2 text-xs text-brand-charcoal/70 pt-4 border-t border-brand-borderGrey">
+                            <li class="flex items-center gap-2">✓ Unrestricted Access to Studio Team Classes</li>
+                            <li class="flex items-center gap-2">✓ Group Dynamic Structural Loading Guides</li>
+                            <li class="flex items-center gap-2">✓ Live Integrated Heart Rate Analytics</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="block text-center bg-brand-lightGrey text-brand-charcoal font-semibold uppercase text-[10px] tracking-wider py-3.5 rounded-full mt-8 transition-colors hover:bg-brand-borderGrey">Select Membership</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biometric Studio Intake Engine -->
+    <section id="calculator" class="py-24 px-6" x-data="{
+        weight: '',
+        height: '',
+        age: '',
+        gender: 'male',
+        goal: 'loss',
+        results: null,
+        calculate() {
+            let w = parseFloat(this.weight);
+            let h = parseFloat(this.height);
+            let a = parseFloat(this.age);
+            if(!w || !h || !a) return;
+            
+            let bmi = w / ((h/100) * (h/100));
+            let bmr = (10 * w) + (6.25 * h) - (5 * a);
+            bmr = this.gender === 'male' ? bmr + 5 : bmr - 161;
+            
+            let tdee = bmr * 1.375;
+            if(this.goal === 'loss') tdee -= 450;
+            if(this.goal === 'gain') tdee += 300;
+            
+            this.results = {
+                bmi: Math.round(bmi * 10) / 10,
+                calories: Math.round(tdee),
+                protein: Math.round(w * 2.0)
+            }
+        }
+    }">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 space-y-2">
+                <h2 class="font-display text-4xl font-bold tracking-tight">Studio Biometric Allocation Engine</h2>
+                <p class="text-brand-charcoal/50 max-w-xl mx-auto text-xs">Establish your metabolic framework metrics to prepare for your physical training assessment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-brand-pureWhite p-6 md:p-8 rounded-3xl border border-brand-borderGrey shadow-premium">
+                
+                <form @submit.prevent="calculate()" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <button type="button" @click="gender = 'male'" :class="gender === 'male' ? 'bg-brand-pink text-white' : 'bg-brand-lightGrey text-brand-charcoal'" class="py-2.5 rounded-full font-semibold uppercase text-[10px] tracking-wider transition-all">Male</button>
+                        <button type="button" @click="gender = 'female'" :class="gender === 'female' ? 'bg-brand-pink text-white' : 'bg-brand-lightGrey text-brand-charcoal'" class="py-2.5 rounded-full font-semibold uppercase text-[10px] tracking-wider transition-all">Female</button>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-brand-charcoal/50 uppercase tracking-wider">Weight Parameter (kg)</label>
+                        <input type="number" required placeholder="e.g. 68" x-model="weight" class="w-full bg-brand-lightGrey/50 border border-brand-borderGrey rounded-xl px-4 py-3 text-brand-charcoal focus:outline-none focus:border-brand-pink transition-colors text-sm">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-brand-charcoal/50 uppercase tracking-wider">Height Parameter (cm)</label>
+                        <input type="number" required placeholder="e.g. 165" x-model="height" class="w-full bg-brand-lightGrey/50 border border-brand-borderGrey rounded-xl px-4 py-3 text-brand-charcoal focus:outline-none focus:border-brand-pink transition-colors text-sm">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-brand-charcoal/50 uppercase tracking-wider">Age (Years)</label>
+                        <input type="number" required placeholder="e.g. 27" x-model="age" class="w-full bg-brand-lightGrey/50 border border-brand-borderGrey rounded-xl px-4 py-3 text-brand-charcoal focus:outline-none focus:border-brand-pink transition-colors text-sm">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] font-bold text-brand-charcoal/50 uppercase tracking-wider">Physique Strategy Objective</label>
+                        <select x-model="goal" class="w-full bg-brand-lightGrey/50 border border-brand-borderGrey rounded-xl px-4 py-3 text-brand-charcoal focus:outline-none focus:border-brand-pink transition-colors text-sm appearance-none">
+                            <option value="loss">Controlled Body Fat Optimization</option>
+                            <option value="recomp">Boutique Recomposition Management</option>
+                            <option value="gain">Lean Muscle Muscular Development</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-charcoal text-white font-semibold uppercase text-xs tracking-wider py-4 rounded-xl transition-transform active:scale-98">
+                        Generate Intake Diagnostics
+                    </button>
+                </form>
+
+                <!-- Calculations Display Panel -->
+                <div class="h-full flex flex-col justify-center">
+                    <template x-if="results">
+                        <div class="space-y-4">
+                            <div class="bg-brand-pinkLight/40 border border-brand-pink/20 rounded-xl p-5">
+                                <span class="text-brand-charcoal/40 text-[10px] uppercase font-bold tracking-widest block mb-1">Calculated BMI Rating</span>
+                                <div class="text-3xl font-display font-bold text-brand-charcoal"><span x-text="results.bmi"></span> <span class="text-xs font-sans text-brand-pink font-semibold uppercase">kg/m²</span></div>
+                            </div>
+                            <div class="bg-brand-pinkLight/40 border border-brand-pink/20 rounded-xl p-5">
+                                <span class="text-brand-charcoal/40 text-[10px] uppercase font-bold tracking-widest block mb-1">Target Daily Energy Expenditure</span>
+                                <div class="text-3xl font-display font-bold text-brand-pink"><span x-text="results.calories"></span> <span class="text-xs font-sans text-brand-charcoal font-semibold uppercase">Kcal / Day</span></div>
+                            </div>
+                            <div class="bg-brand-pinkLight/40 border border-brand-pink/20 rounded-xl p-5">
+                                <span class="text-brand-charcoal/40 text-[10px] uppercase font-bold tracking-widest block mb-1">Essential Target Protein Target</span>
+                                <div class="text-3xl font-display font-bold text-brand-charcoal"><span x-text="results.protein"></span> <span class="text-xs font-sans text-brand-charcoal font-semibold uppercase">Grams / Day</span></div>
+                            </div>
+                            <a href="#booking" class="block text-center bg-brand-pink text-white font-semibold uppercase tracking-wider py-3.5 rounded-xl text-xs shadow-premium">Attach Results To Free Pass</a>
+                        </div>
+                    </template>
+                    <template x-if="!results">
+                        <div class="border border-dashed border-brand-borderGrey rounded-2xl flex flex-col items-center justify-center p-8 text-center text-brand-charcoal/40 min-h-[350px]">
+                            <p class="text-xs font-medium max-w-xs leading-relaxed">Input your baseline biological metrics to securely formulate target intake recommendations prior to physical check-in loops.</p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Boutique Class Schedule -->
+    <section id="schedule" class="py-24 px-6 bg-brand-lightGrey border-t border-brand-borderGrey" x-data="{
+        activeDay: 'mon',
+        classes: {
+            mon: [
+                { time: '08:30 AM', name: 'Sculpt & Core Hypertrophy', coach: 'Coach Krish', open: '2 Slots Left' },
+                { time: '05:30 PM', name: 'Metabolic Performance Burn', coach: 'Coach Elena', open: 'Fully Booked' }
+            ],
+            wed: [
+                { time: '09:00 AM', name: 'Kinetic Mobility & Alignment', coach: 'Coach Sarah', open: '4 Slots Available' },
+                { time: '06:30 PM', name: 'High-Density Posterior Chain Work', coach: 'Coach Krish', open: '1 Slot Left' }
+            ],
+            fri: [
+                { time: '08:30 AM', name: 'Full Body Depletion Flow', coach: 'Coach Krish', open: '3 Slots Left' },
+                { time: '04:30 PM', name: 'Infrared Restoration & Decompression', coach: 'Coach Sarah', open: 'Available' }
+            ]
+        }
+    }">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+                <div>
+                    <span class="text-brand-pink text-xs font-bold uppercase tracking-widest block mb-2">Live Studio Manifest</span>
+                    <h2 class="font-display text-4xl font-bold tracking-tight">Active Class Schedule</h2>
+                </div>
+                
+                <!-- Minimal Day Selectors -->
+                <div class="flex bg-brand-pureWhite p-1.5 rounded-full border border-brand-borderGrey shadow-sm">
+                    <button @click="activeDay = 'mon'" :class="activeDay === 'mon' ? 'bg-brand-pink text-white font-semibold' : 'text-brand-charcoal/60'" class="px-5 py-2 rounded-full text-xs uppercase tracking-wider transition-all">Mon</button>
+                    <button @click="activeDay = 'wed'" :class="activeDay === 'wed' ? 'bg-brand-pink text-white font-semibold' : 'text-brand-charcoal/60'" class="px-5 py-2 rounded-full text-xs uppercase tracking-wider transition-all">Wed</button>
+                    <button @click="activeDay = 'fri'" :class="activeDay === 'fri' ? 'bg-brand-pink text-white font-semibold' : 'text-brand-charcoal/60'" class="px-5 py-2 rounded-full text-xs uppercase tracking-wider transition-all">Fri</button>
+                </div>
+            </div>
+
+            <!-- Schedule Card Array -->
+            <div class="space-y-3">
+                <template x-for="item in classes[activeDay]">
+                    <div class="bg-brand-pureWhite border border-brand-borderGrey rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm transition-all hover:border-brand-pink/30">
+                        <div class="flex items-center gap-6">
+                            <div class="text-lg font-display font-bold text-brand-pink" x-text="item.time"></div>
+                            <div>
+                                <h4 class="text-base font-semibold text-brand-charcoal tracking-wide" x-text="item.name"></h4>
+                                <p class="text-xs text-brand-charcoal/40 mt-0.5" x-text="'Guided by ' + item.coach"></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
+                            <span :class="item.open === 'Fully Booked' ? 'text-red-400 border-red-200 bg-red-50/5' : 'text-brand-pink border-brand-pink/20 bg-brand-pinkLight'" class="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md border" x-text="item.open"></span>
+                            <a href="#booking" class="bg-brand-charcoal text-white text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-lg hover:bg-brand-pink transition-colors">Reserve Spot</a>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Pass Studio Induction Form -->
+    <section id="booking" class="py-24 px-6 max-w-4xl mx-auto scroll-mt-12" x-data="{ submitted: false }">
+        <div class="bg-brand-pureWhite p-8 md:p-12 rounded-3xl border border-brand-borderGrey shadow-premium relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-pinkLight/50 rounded-full filter blur-[80px] pointer-events-none"></div>
+
+            <div x-show="!submitted">
+                <div class="text-center mb-10 space-y-2">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Request Boutique Studio Access</h2>
+                    <p class="text-brand-charcoal/50 text-xs max-w-md mx-auto">Experience high-density biomechanics and our premium amenities firsthand. Your initial facility session pass is entirely complimentary.</p>
+                </div>
+
+                <form @submit.prevent="submitted = true" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-brand-charcoal/40 tracking-wider">Full Legal Name</label>
+                        <input type="text" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-lightGrey border border-brand-borderGrey rounded-xl px-4 py-3.5 text-brand-charcoal text-sm focus:outline-none focus:border-brand-pink transition-colors">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-brand-charcoal/40 tracking-wider">Mobile Phone Vector</label>
+                        <input type="tel" required placeholder="e.g. +1 (555) 019-2834" class="w-full bg-brand-lightGrey border border-brand-borderGrey rounded-xl px-4 py-3.5 text-brand-charcoal text-sm focus:outline-none focus:border-brand-pink transition-colors">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-brand-charcoal/40 tracking-wider">Primary Studio Goal Focus</label>
+                        <select required class="w-full bg-brand-lightGrey border border-brand-borderGrey rounded-xl px-4 py-3.5 text-brand-charcoal text-sm focus:outline-none focus:border-brand-pink transition-colors">
+                            <option value="">Select Training Focus...</option>
+                            <option value="pt">Dedicated 1-on-1 Premium Private Coaching</option>
+                            <option value="floor">Boutique Facility Floor Independent Membership</option>
+                            <option value="group">High-Tempo Circuit & Conditioning Classes</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-brand-charcoal/40 tracking-wider">Target Activation Session</label>
+                        <select required class="w-full bg-brand-lightGrey border border-brand-borderGrey rounded-xl px-4 py-3.5 text-brand-charcoal text-sm focus:outline-none focus:border-brand-pink transition-colors">
+                            <option value="monday">Forthcoming Monday Session</option>
+                            <option value="wednesday">Forthcoming Wednesday Session</option>
+                            <option value="friday">Forthcoming Friday Session</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2 space-y-1">
+                        <label class="text-[10px] uppercase font-bold text-brand-charcoal/40 tracking-wider">Physical Considerations or Exercise History</label>
+                        <textarea rows="4" required placeholder="Kindly share existing functional limits, past joint injuries, or dietary constraints clearly..." class="w-full bg-brand-lightGrey border border-brand-borderGrey rounded-xl px-4 py-3.5 text-brand-charcoal text-sm focus:outline-none focus:border-brand-pink transition-colors resize-none"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 pt-4">
+                        <button type="submit" class="w-full bg-brand-pink text-white uppercase font-semibold tracking-wider py-4 rounded-full text-xs shadow-premium transition-colors hover:bg-brand-pinkHover active:scale-98">
+                            Generate My Digital Facility Induction QR Code
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Request Complete Success State -->
+            <div x-show="submitted" x-cloak class="text-center py-16 space-y-4">
+                <div class="inline-flex items-center justify-center p-4 bg-brand-pinkLight rounded-full text-brand-pink mb-2 text-2xl">✓</div>
+                <h3 class="font-display text-2xl font-bold tracking-wide text-brand-charcoal">Induction Application Logged</h3>
+                <p class="text-brand-charcoal/60 text-xs max-w-sm mx-auto">Your physical studio guest pass request has been initialized securely. Please monitor your phone text metrics or target inbox for access QR profile verification maps within 10 minutes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Premium Clean Footer -->
+    <footer class="bg-brand-pureWhite border-t border-brand-borderGrey py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="font-display text-lg font-bold tracking-tight mb-4">Krish <span class="text-brand-pink italic font-normal">Studio</span></h3>
+                <p class="text-brand-charcoal/50 text-xs leading-relaxed max-w-xs">Boutique physical wellness frameworks engineered to optimize personal performance mechanics and foster lasting aesthetic changes.</p>
+            </div>
+            <div class="flex flex-col space-y-2 text-xs text-brand-charcoal/60">
+                <span class="font-bold text-brand-charcoal uppercase tracking-widest text-[10px] mb-2">Location & Floor Hours</span>
+                <p class="text-brand-charcoal font-semibold">Headquarters Studio — Complex Block Alpha</p>
+                <p>Weekdays: 06:00 AM — 09:00 PM</p>
+                <p>Weekends: 08:00 AM — 05:00 PM</p>
+            </div>
+            <div class="text-xs text-brand-charcoal/50">
+                <span class="font-bold text-brand-charcoal uppercase tracking-widest text-[10px] block mb-2">Studio Protocol Notice</span>
+                <p>Facility access requires active verification via dynamic member QR tokens. Clean, indoor performance footwear required within active training sectors.</p>
+                <p class="mt-4 text-[10px] text-brand-charcoal/30">© 2026 Krish Fitness Studio HQ. All Rights Curation Frameworks.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
